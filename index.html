@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCue</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="js/FileSaver.js"></script>
+
+    <script src="directoryimporter.js" type="module"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <div id="text_overlay">Please input your note into the box below:</div>
+         <input type="text" id="notecue_input" name="Note" placeholder="Your note...">
+        <button type="button" id="cancel_noteadd_overlay">Cancel</button>
+        <button type="button" id="accept_noteadd_overlay">Accept</button>
+    </div>
+
+    <div id="cue_settings">
+        <div id="cue_settings_child">
+            <h3 id="cue_text_overlay">Cue Settings</h3>
+
+            <!--<label for="cuename_input" class="cuelabel" style="top: 30%">Cue name:</label>
+            <input type="text" id="cuename_input" name="CueName" value="ERROR">-->
+
+            <label for="cuevolume_input" class="cuelabel" style="top: 25%">Cue volume:</label>
+            <input type="range" min="0" max="2" value="1" step="0.01" class="slider" id="volume">
+
+            <label for="cuepan_input" class="cuelabel" style="top: 40%">Cue pan:</label>
+            <input type="range" min="-1" max="1" value="0" step="0.01" class="slider slider2" id="panner">
+
+            <button type="button" id="wait" onclick="waitpressed_cuesettings()"></button>
+
+            <button type="button" id="follow" onclick="followpressed_cuesettings()"></button>
+
+            <button type="button" id="cuesettingsave">Save</button>
+        </div>
+    </div>
+
+    <div id="directoryselectorscr">
+        <div id="directoryselectorscr_child">
+            <h3 id="directoryselector_text_overlay">Please select the directory in which your audio cues are located</h3>
+            <button type="button" id="opendirectorybutton">Open Directory</button>
+        </div>
+    </div>
+
+    <div id="directoryselector2scr">
+        <div id="directoryselector2scr_child">
+            <h3 id="directoryselector_text_overlay">Please select the directory in which your audio cues are located</h3>
+            <button type="button" id="opendirectory2button">Open Directory</button>
+        </div>
+    </div>
+
+    <div id="fileselectorscr">
+        <div id="fileselectorscr_child">
+            <h3 id="fileselector_text_overlay">Click on the name of a file to create a audio cue</h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="topnav_container">
+        <div class="topnav_logo">
+            <img src="../Logo.png" alt="" width="130">
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a id="saveprodbutton2">Save Production</a>
+            <input type="file" id="load_production_file" accept=".gocue">
+            <label id="load_production" for="load_production_file">Load Production</label>
+        </div>
+        <div class="topnav_info">
+            <h2 id="totalcue_display">0 cues</h2>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-2" style="position: sticky; top: 0;">
+            <div class="controls_menu">
+                <div class="controls_inner_menu">
+                    <button class="controls" type="button" id="go"></button>
+                    
+                    <hr width="67%">
+
+                    <button class="controls" type="button" id="play"></button>
+                    <button class="controls" type="button" id="pause"></button>
+                    <!--<button class="controls" type="button" id="rewind"></button>-->
+                    <button class="controls" type="button" id="stop"></button>
+                    <!--<input type="range" id="volume" min="0" max="2" value="1" step="0.01"></input>-->
+
+                    <hr width="67%">
+                    
+                    <div>
+                        <div class="sound-upload" style="display: inline;">
+                            <label for="sound-upload-input">
+                                <img id="sound-upload-img" src="../AUDIO_ADD.png"/>
+                            </label>
+                            
+                            <input id="sound-upload-input" type="button" multiple accept="audio/*"/>
+                        </div>
+                        
+                        <div class="note-add" style="display: inline;">
+                            <label for="note_add-actual">
+                                <img id="note-add-img" src="../NOTE_ADD.png">
+                            </label>
+
+                            <input id="note_add-actual" type="button" onclick="AddNote()"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10" id="cue_list" style="border: 0px solid red;">
+        </div>
+    </div>
+
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                   .register('/sw.js')
+                   .then(function() { console.log("Service Worker Registered"); });
+        }
+    </script>
+
+</body>
+
+<script type="text/javascript" src="main.js"></script>
+</html>
