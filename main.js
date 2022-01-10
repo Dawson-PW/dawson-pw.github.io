@@ -37,9 +37,9 @@ var blobs;
 //check the width and other factors to see if this device is suitable to run GoCue, if it isn't redirect.
 let width = window.innerWidth;
 if (width < 800) {
-    window.location.href = 'https://dawson-pw.github.io/noentry.html';
+    location.reload('https://dawson-pw.github.io/noentry.html');
 } else if (screen.availHeight > screen.availWidth){
-    window.location.href = 'https://dawson-pw.github.io/noentry.html';
+    location.reload('https://dawson-pw.github.io/noentry.html');
 }
 
 //////
