@@ -1,3 +1,12 @@
+//service worker setup
+
+// register ServiceWorker, remember to use absolute path!
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js', {scope: '/'})
+}
+
+/////////////////////////////////
+
 //Disable the individual controls at the start of the program, as no cues exist and none are selected.
 IndividualControlDisable();
 
