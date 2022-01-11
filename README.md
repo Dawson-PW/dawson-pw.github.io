@@ -2,7 +2,7 @@
 ![GoCue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/Logolarge.png?raw=true)
  
 Go Cue is an online and web-based theatre and live production audio cue playback system.  
-This is a web-based application that has been tested on the latest version of Chrome, and on Chrome on Android!
+This is a web-based application that has been tested on the latest version of Chrome on windows.
 
 I would be delighted to hear your feedback on what you think could be improved, as everything is very new.
 
@@ -16,7 +16,7 @@ Once you have added the directory, you will be presented with the main GoCue ope
   
 In the bottom left corner there are two buttons, the add audio cue icon, and the add note cue icon:
 
-#### Add Audio Cue
+#### Add Audio Cue  
 ![Add Audio Cue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/AUDIO_ADD.png?raw=true)
 When this button is clicked, it will present you with a list of all the files contained within the directory (folder) that you selected. To add an audio file to the main cue list, click anywhere in the appropriate box and it will be added to the end of any existing cues in the cue list. Cues are always added consecutively.   
   
