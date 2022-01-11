@@ -17,15 +17,15 @@ Once you have added the directory, you will be presented with the main GoCue ope
 In the bottom left corner there are two buttons, the add audio cue icon, and the add note cue icon:
 
 #### Add Audio Cue  
-![Add Audio Cue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/AUDIO_ADD.png?raw=true)
-When this button is clicked, it will present you with a list of all the files contained within the directory (folder) that you selected. To add an audio file to the main cue list, click anywhere in the appropriate box and it will be added to the end of any existing cues in the cue list. Cues are always added consecutively.   
+![Add Audio Cue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/AUDIO_ADD.png?raw=true)  
+  When this button is clicked, it will present you with a list of all the files contained within the directory (folder) that you selected. To add an audio file to the main cue list, click anywhere in the appropriate box and it will be added to the end of any existing cues in the cue list. Cues are always added consecutively.   
   
    
 At the moment, GoCue will still let you add a file which isn't an audio file, this is a bug which I am currently working on fixing, do not do this as it may crash!
 
 #### Add Note Cue
-![Add Note Cue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/NOTE_ADD.png?raw=true)
-When this button is clicked, it will ask you to enter into the textbox a description/name for this note cue which will be presented within the main cue list. You can either choose to cancel, and the cue won't be added, or to accept and the cue will be added to the end of any existing cues in the cue list.  
+![Add Note Cue](https://github.com/Dawson-PW/dawson-pw.github.io/blob/master/NOTE_ADD.png?raw=true)  
+  When this button is clicked, it will ask you to enter into the textbox a description/name for this note cue which will be presented within the main cue list. You can either choose to cancel, and the cue won't be added, or to accept and the cue will be added to the end of any existing cues in the cue list.  
 Note cues are the same as audio cues in the fact that cues are always added consecutively.
 
 #### Main GO
