@@ -1,6 +1,6 @@
 self.addEventListener('install', function(e) {
  e.waitUntil(
-   caches.open('GoCue_v1').then(function(cache) {
+   caches.open('GoCue_v1.01').then(function(cache) {
      return cache.addAll([
         './',                     // If you have separate JS/CSS files,
         './index.html',            // add path to those files here
@@ -61,7 +61,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', (event) => {
-    var cacheKeeplist = ['GoCue_v1'];
+    var cacheKeeplist = ['GoCue_v1.01'];
   
     event.waitUntil(
       caches.keys().then((keyList) => {
