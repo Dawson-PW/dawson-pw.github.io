@@ -44,6 +44,15 @@ if (width < 800) {
 
 //////
 
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'Make sure you have saved your cue list if you want to be able to access it again.';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
+
+//////
+
 off_cuesettings()
 
 ///////////////////////////////////////////////

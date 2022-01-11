@@ -1,6 +1,6 @@
 self.addEventListener('install', function(e) {
  e.waitUntil(
-   caches.open('GoCue').then(function(cache) {
+   caches.open('GoCue_v1').then(function(cache) {
      return cache.addAll([
         './',                     // If you have separate JS/CSS files,
         './index.html',            // add path to those files here
@@ -59,3 +59,17 @@ self.addEventListener('fetch', function(event) {
       })
     );
 });
+
+self.addEventListener('activate', (event) => {
+    var cacheKeeplist = ['GoCue_v1'];
+  
+    event.waitUntil(
+      caches.keys().then((keyList) => {
+        return Promise.all(keyList.map((key) => {
+          if (cacheKeeplist.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }));
+      })
+    );
+  });
